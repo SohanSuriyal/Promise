@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #fff9f6;
+    color: #4a3e3d;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.font-handwriting {
+  font-family: 'Kalam', 'Caveat', cursive;
+}
+
+.font-cute {
+  font-family: 'Sniglet', 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-letter {
+  font-family: 'Caveat', 'Kalam', cursive;
+}
+
+/* Paper note texture styling */
+.paper-pattern {
+  background-color: #fffbf7;
+  background-image: 
+    linear-gradient(#f0e6de 1px, transparent 1px),
+    linear-gradient(90deg, #f0e6de 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.lined-paper {
+  background-color: #fffdfa;
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 31px,
+    #f3e3dc 31px,
+    #f3e3dc 32px
+  );
+  line-height: 32px;
+}
+
+/* Soft floating animations */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+}
+
+@keyframes pulseGently {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+@keyframes driftUp {
+  0% {
+    transform: translateY(100vh) scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  85% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1) rotate(18deg);
+    opacity: 0;
+  }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulseGently 3s ease-in-out infinite;
+}

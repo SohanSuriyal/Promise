@@ -1,0 +1,6 @@
+{
+  "name": "For You 🤍",
+  "description": "A sweet, cute, and personal surprise made with care.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
