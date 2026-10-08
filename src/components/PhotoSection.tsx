@@ -62,7 +62,7 @@ export const PhotoSection: React.FC = () => {
           setPhotos((prev) => {
             const updated = prev.map((p) => (p.id === id ? { ...p, url: newUrl } : p));
             try {
-              localStorage.setItem('user_photo_gallery_v2', JSON.stringify(updated));
+              localStorage.setItem('user_photo_gallery_v3', JSON.stringify(updated));
             } catch {
               // Local storage full
             }
