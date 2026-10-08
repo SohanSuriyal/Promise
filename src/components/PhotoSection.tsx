@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Camera, Sparkles } from 'lucide-react';
 
 // Photos matching her 4 uploaded pictures
-import photoHerPortrait from '../assets/images/photo_her_portrait_new_1791451975679.jpg';
-import photoHerCar from '../assets/images/photo_her_yellow_car_new_1791451992772.jpg';
-import photoHerMirror from '../assets/images/photo_her_mirror_stripes_1791452011318.jpg';
-import photoHerPurple from '../assets/images/photo_her_purple_tilted_new_1791452024260.jpg';
+import photoHerSelfie from '../assets/images/photo_her_selfie_1791451623937.jpg';
+import photoHerPurple from '../assets/images/photo_her_purple_relaxed_1791451656354.jpg';
+import photoKitten from '../assets/images/photo_kitten_surprise_1791451644263.jpg';
+import photoHerYellowCar from '../assets/images/photo_her_yellow_car_1791451633596.jpg';
 
 interface PhotoItem {
   id: number;
@@ -17,29 +17,29 @@ export const PhotoSection: React.FC = () => {
   const defaultPhotos: PhotoItem[] = [
     {
       id: 1,
-      url: photoHerPortrait,
+      url: photoHerSelfie,
       caption: 'quiet little momen...',
     },
     {
       id: 2,
-      url: photoHerCar,
+      url: photoHerPurple,
       caption: 'cozy & safe 🐾',
     },
     {
       id: 3,
-      url: photoHerMirror,
+      url: photoKitten,
       caption: 'my favorite smile ✨',
     },
     {
       id: 4,
-      url: photoHerPurple,
+      url: photoHerYellowCar,
       caption: 'little things for y...',
     },
   ];
 
   const [photos, setPhotos] = useState<PhotoItem[]>(() => {
     try {
-      const saved = localStorage.getItem('user_photo_gallery_v2');
+      const saved = localStorage.getItem('user_photo_gallery_v3');
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length === 4) {
